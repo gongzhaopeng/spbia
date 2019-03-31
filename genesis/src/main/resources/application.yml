@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  main:
+    banner-mode: log
+  datasource:
+    initialization-mode: never
+  jpa:
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.xml
+
+amazon:
+  associateId: atzu68
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: when_authorized
